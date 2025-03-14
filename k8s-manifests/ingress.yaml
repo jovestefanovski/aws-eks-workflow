@@ -11,8 +11,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: 3-111-158-0.nip.io
-      http:
+    - http:
         paths:
           - path: /api
             pathType: Prefix

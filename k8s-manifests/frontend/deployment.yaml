@@ -7,7 +7,7 @@ metadata:
     role: frontend
     env: demo
 spec: 
-  replicas: 1
+  replicas: 2
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -29,6 +29,6 @@ spec:
         imagePullPolicy: Always
         env:
           - name: REACT_APP_BACKEND_URL
-            value: "http://praduman.ip-ddns.com/api/tasks"
+            value: "http://k8s-threetie-mainlb-65cdc43648-654070148.eu-central-1.elb.amazonaws.com/api/tasks"
         ports:
         - containerPort: 3000
